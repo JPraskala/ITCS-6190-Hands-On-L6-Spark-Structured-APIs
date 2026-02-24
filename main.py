@@ -6,7 +6,8 @@ from pyspark.sql.window import Window
 spark = SparkSession.builder.appName("MusicAnalysis").getOrCreate()
 
 # Load datasets
-
+listening_logs_df = spark.read.csv("listening_logs.csv")
+songs_metadata_df = spark.read.csv("songs_metadata.csv")
 
 # Task 1: User Favorite Genres
 
