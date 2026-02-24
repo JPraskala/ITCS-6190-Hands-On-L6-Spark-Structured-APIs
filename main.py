@@ -11,12 +11,13 @@ songs_metadata_df = spark.read.csv("songs_metadata.csv")
 
 # Task 1: User Favorite Genres
 
+listening_logs_df.join(songs_metadata_df).select("user_id", "genre").groupBy("user_id", "genre")
 
 # Task 2: Average Listen Time
-
-
+listening_logs_df.groupBy("user_id").agg(avg("duration_sec").alias("Average Listen Time"))
 
 # Task 3: Create your own Genre Loyalty Scores and rank them and list out top 10
 
 
 # Task 4: Identify users who listen between 12 AM and 5 AM
+listening_logs_df.select("user_id").where("")
