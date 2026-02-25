@@ -37,7 +37,12 @@ users_listen = listening_logs_df.select("user_id").where(hour("timestamp").betwe
 
 
 # Write to the csv files
-favorite_genres.write.mode("overwrite").options(header=True).csv("./output")
-average_listening_time.write.mode("overwrite").options(header=True).csv("./output")
-loyalty_score.write.mode("overwrite").options(header=True).csv("./output")
-users_listen.write.mode("overwrite").options(header=True).csv("./output")
+# favorite_genres.write.mode("overwrite").options(header=True).csv("./outputs")
+# average_listening_time.write.mode("overwrite").options(header=True).csv("./outputs")
+# loyalty_score.write.mode("overwrite").options(header=True).csv("./outputs")
+# users_listen.write.mode("overwrite").options(header=True).csv("./outputs")
+
+favorite_genres.toPandas().to_csv("outputs/favorite_genres.csv", index=False)
+average_listening_time.toPandas().to_csv("outputs/average_listening_time.csv", index=False)
+loyalty_score.toPandas().to_csv("outputs/loyalty_score.csv", index=False)
+users_listen.toPandas().to_csv("outputs/users_listen.csv", index=False)
