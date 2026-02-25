@@ -15,17 +15,61 @@ The outputs directory contains the four csv files. Each csv file pertains to a s
 ## Tasks and Outputs
 ### Task 1: User Favorite Genres.
 The output is in outputs/favorite_genres.csv
+
+#### Sample:
+```
+user_id,genre,user_genre_count
+user_1,Pop,4
+user_10,Classical,3
+user_10,Pop,3
+user_100,Rock,3
+user_100,Jazz,3
+user_11,Hip-Hop,4
+```
 ### Task 2: Average Listen Time
 The output is in outputs/average_listening_time.csv 
+
+#### Sample: 
+```
+user_id,Average Listen Time
+user_58,205.45454545454547
+user_94,178.25
+user_73,146.4
+user_85,209.92307692307693
+user_14,133.08333333333334
+user_56,202.375
+```
 ### Task 3: Create your own Genre Loyalty Scores and rank them and list out top 10
 The output is in outputs/loyalty_score.csv
+
+#### Sample:
+```
+user_id,genre,loyalty_score
+user_75,Jazz,0.8671497584541062
+user_39,Hip-Hop,0.8280542986425339
+user_28,Classical,0.7386692381870781
+user_68,Classical,0.7274844720496895
+user_30,Classical,0.6917385943279901
+user_96,Classical,0.6734463276836158
+```
 ### Task 4: Identify users who listen between 12 AM and 5 AM
 The output is in outputs/users_listen.csv
+
+#### Sample:
+```
+user_id
+user_58
+user_94
+user_14
+user_56
+user_68
+user_22
+```
 
 ## Execution Instructions
 To execute the code, follow the instructions below. You will need pyspark and pandas installed on your machine or in a virtual environment to run the code. Also, ensure you have an older version of Java (Java 17 is recommended). 
 
-### _Prerequisites_
+## _Prerequisites_
 
 Before starting the assignment, ensure you have the following software installed and properly configured on your machine:
 
@@ -79,7 +123,7 @@ When I called the spark-submit command, I received an error which said `pyspark.
 
 ### Second Error
 
-Initially, when I wrote my outputs to the csv files, I received an error stating that an object of type `None` has no attribute mode. I fixed this issue by remove the `show()` function from the outputs.
+Initially, when I wrote my outputs to the csv files, I received an error stating that an object of type `None` has no attribute mode. I fixed this issue by removing the `show()` function from the outputs.
 
 ### Third Error 
 The third error also occurs when I attempt to write my outputs to the csv files. The message I received was I did not have Pandas installed. After running the command `python3 -m pip install pandas`, I was able to successfully execute the code.
