@@ -56,3 +56,5 @@ Before starting the assignment, ensure you have the following software installed
    ```
 
 ## Errors and Resolutions
+### First Error 
+When I called the spark-submit command, I received an error which said ```pyspark.errors.exceptions.captured.UnsupportedOperationException: getSubject is not supported```. 
